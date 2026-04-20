@@ -1,0 +1,86 @@
+1. What is SQL?
+
+Answer:
+SQL stands for Structured Query Language. It is used to interact with relational databases for storing, retrieving, updating, and deleting data.
+
+2. What are the main types of SQL commands?
+
+Answer:
+They are usually grouped into:
+
+DDL: Data Definition Language
+Examples: CREATE, ALTER, DROP, TRUNCATE
+DML: Data Manipulation Language
+Examples: INSERT, UPDATE, DELETE
+DQL: Data Query Language
+Example: SELECT
+DCL: Data Control Language
+Examples: GRANT, REVOKE
+TCL: Transaction Control Language
+Examples: COMMIT, ROLLBACK, SAVEPOINT
+3. What is the difference between DELETE, TRUNCATE, and DROP?
+
+Answer:
+
+DELETE removes specific rows and can use a WHERE clause.
+TRUNCATE removes all rows from a table very quickly, but keeps the table structure.
+DROP removes the entire table structure and data permanently.
+4. What is a primary key?
+
+Answer:
+A primary key uniquely identifies each row in a table.
+It cannot contain NULL values and must be unique.
+
+5. What is a foreign key?
+
+Answer:
+A foreign key is a column that creates a relationship between two tables.
+It refers to the primary key in another table and helps maintain referential integrity.
+
+6. What is the difference between WHERE and HAVING?
+
+Answer:
+
+WHERE filters rows before grouping.
+HAVING filters groups after GROUP BY.
+
+Example:
+
+SELECT department, COUNT(*)
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 5;
+7. What is the difference between GROUP BY and ORDER BY?
+
+Answer:
+
+GROUP BY groups rows with similar values for aggregation.
+ORDER BY sorts the result set.
+8. What are joins in SQL?
+
+Answer:
+Joins combine rows from two or more tables based on a related column.
+
+Common joins:
+
+INNER JOIN: returns matching rows from both tables
+LEFT JOIN: returns all rows from left table and matching rows from right table
+RIGHT JOIN: returns all rows from right table and matching rows from left table
+FULL OUTER JOIN: returns all rows from both tables, matched where possible
+9. What is the difference between INNER JOIN and LEFT JOIN?
+
+Answer:
+
+INNER JOIN returns only matching rows.
+LEFT JOIN returns all rows from the left table, even if no match exists in the right table.
+10. What is a subquery?
+
+Answer:
+A subquery is a query inside another query.
+It can be used in SELECT, FROM, or WHERE.
+
+Example:
+
+SELECT name
+FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);
